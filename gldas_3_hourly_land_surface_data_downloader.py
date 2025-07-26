@@ -1,3 +1,21 @@
+"""
+✅ Use .netrc Authentication (Secure + Supported)
+🔐 Step 1: Create .netrc File
+Create a file called .netrc in your home directory (e.g. C:\Users\YourName\.netrc on Windows or ~/.netrc on Linux/macOS) with the following contents:
+
+machine urs.earthdata.nasa.gov
+login _________
+password _________
+
+Then make sure its permissions are secure:
+
+On Linux/macOS:
+chmod 600 ~/.netrc
+
+🔐 Step 2: Modify Script to Use .netrc (no credentials in code)
+session.auth = None  # Use .netrc 
+"""
+
 import os
 import requests
 from datetime import datetime, timedelta
